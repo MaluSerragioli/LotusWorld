@@ -10,6 +10,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 function Login() {
     userName=document.getElementById("form2Example11").value
+    localStorage.setItem("name", userName)
     firebase.database().ref("/").child(userName).update({
         purpose:"newUsername"
     })

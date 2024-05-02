@@ -27,3 +27,13 @@ function getData() {
     });
 }
 getData()
+
+function redirectToRoomName(name) {
+ localStorage.setItem("roomName", name)
+ window.location = "lotusPage.html"   
+}
+function logout() {
+    localStorage.removeItem("roomName")
+    localStorage.removeItem("name")
+    window.location = "index.html"
+}
